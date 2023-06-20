@@ -9,7 +9,7 @@ spring:
   datasource:
     type: com.mchange.v2.c3p0.ComboPooledDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/crm?serverTimezone=UTC
     username: root
     password: rootroot
   ## freemarker

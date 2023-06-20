@@ -1,6 +1,6 @@
 package com.whq.crm.utils;
 
-import com.xxxx.crm.exceptions.ParamsException;
+import com.whq.crm.exceptions.ParamsException;
 
 public class AssertUtil {
 
