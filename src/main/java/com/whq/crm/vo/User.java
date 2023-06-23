@@ -1,17 +1,66 @@
 package com.whq.crm.vo;
 
 public class User {
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+
     private Integer id;
 
-    private String username;
+    private String userName;
 
-    private String password;
+    private String userPwd;
 
     private Integer age;
 
     private String gender;
 
     private String email;
+
+    private String phone;
+
+    private Integer isValid;
+
+    private String createDate;
+
+    private String updateDate;
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Integer getIsValid() {
+        return isValid;
+    }
+
+    public void setIsValid(Integer isValid) {
+        this.isValid = isValid;
+    }
 
     private String trueName;
 
@@ -23,28 +72,20 @@ public class User {
         this.trueName = trueName;
     }
 
-    public Integer getId() {
-        return id;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserPwd() {
+        return userPwd;
     }
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
+    public void setUserPwd(String UserPwd) {
+        this.userPwd = UserPwd == null ? null : UserPwd.trim();
     }
 
     public Integer getAge() {

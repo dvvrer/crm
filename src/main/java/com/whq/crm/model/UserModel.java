@@ -2,17 +2,26 @@ package com.whq.crm.model;
 
 public class UserModel {
 
-    private Integer userId;
+//    private Integer userId;
     private String userName;
     private String trueName;
+    private String userIdStr;   //加密后的userId
 
-    public Integer getUserId() {
-        return userId;
+    public String getUserIdStr() {
+        return userIdStr;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUserIdStr(String userIdStr) {
+        this.userIdStr = userIdStr;
     }
+
+//    public Integer getUserId() {
+//        return userId;
+//    }
+//
+//    public void setUserId(Integer userId) {
+//        this.userId = userId;
+//    }
 
     public String getUserName() {
         return userName;

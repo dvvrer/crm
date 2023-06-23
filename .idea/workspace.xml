@@ -4,8 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="1">
+    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="add user file">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/cusDevPlan/add_update.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/cusDevPlan/cus_dev_plan.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/cusDevPlan/cus_dev_plan_data.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customer/add_update.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customer/customer.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customer/customer_order.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customer/customer_order_detail.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerLoss/customer_loss.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerLoss/customer_rep.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerLoss/customer_rep_add_update.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve_add.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve_archive.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve_assign.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve_assign_add.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve_feed_back.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve_feed_back_add.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve_proce.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/customerServe/customer_serve_proce_add.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/module/add.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/module/module.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/module/update.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/report/customer_contri.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/report/customer_loss.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/report/customer_make.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/role/add_update.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/role/grant.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/role/role.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/saleChance/add_update.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/saleChance/sale_chance.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/user/add_update.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/user/password.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/user/user.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/model/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,22 +95,33 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/whq/crm/dao" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/views" />
       <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm/dao" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm" />
-      <recent name="$PROJECT_DIR$/src/main/resources/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Starter">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -134,7 +185,13 @@
       <workItem from="1687180790535" duration="7266000" />
       <workItem from="1687221016450" duration="1133000" />
       <workItem from="1687223538333" duration="355000" />
-      <workItem from="1687223973153" duration="46000" />
+      <workItem from="1687223973153" duration="1264000" />
+      <workItem from="1687226303491" duration="610000" />
+      <workItem from="1687227264811" duration="317000" />
+      <workItem from="1687227618510" duration="177000" />
+      <workItem from="1687227814378" duration="457000" />
+      <workItem from="1687361787824" duration="12702000" />
+      <workItem from="1687527502564" duration="3029000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1687183879384</created>
@@ -199,7 +256,28 @@
       <option name="project" value="LOCAL" />
       <updated>1687223619287</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1">
+      <created>1687224247541</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687224247541</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test">
+      <created>1687225032679</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687225032679</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add user file">
+      <created>1687225146777</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1687225146777</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +299,12 @@
     <MESSAGE value="add files" />
     <MESSAGE value="addfiles" />
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="test" />
+    <MESSAGE value="add user file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user file" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
