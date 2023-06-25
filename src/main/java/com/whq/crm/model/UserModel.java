@@ -15,14 +15,6 @@ public class UserModel {
         this.userIdStr = userIdStr;
     }
 
-//    public Integer getUserId() {
-//        return userId;
-//    }
-//
-//    public void setUserId(Integer userId) {
-//        this.userId = userId;
-//    }
-
     public String getUserName() {
         return userName;
     }

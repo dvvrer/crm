@@ -25,6 +25,11 @@ public class IndexController extends BaseController {
         return "index";
     }
 
+    @RequestMapping("/user/toPasswordPage")
+    public String toPasswordPage(){
+        return "user/password";
+    }
+
     //系统界面欢迎页
     @RequestMapping("welcome")
     public String welcome(){

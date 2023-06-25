@@ -138,9 +138,7 @@
       update_date = #{updateDate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
-
-
+  
   <!--通过用户名查询用户记录，返回用户对象-->
   <select id="queryUserByName" parameterType="string" resultType="com.whq.crm.vo.User">
     select
