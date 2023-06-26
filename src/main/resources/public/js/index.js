@@ -50,9 +50,6 @@ layui.use(['form','jquery','jquery_cookie'], function () {
                             $.cookie("userName",result.result.userName)
                             $.cookie("trueName",result.result.trueName)
                         }
-
-
-
                         //登录成功后跳转到首页
                         window.location.href = ctx + "/main"
                     })
@@ -63,7 +60,6 @@ layui.use(['form','jquery','jquery_cookie'], function () {
                 }
             }
         });
-
         return false;//阻止表单跳转，如果需要表单跳转，去掉这段即可
     });
     

@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update code 6/25">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/GlobalExceptionResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/config/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/interceptor/NoLoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/password.js" afterDir="false" />
+    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="basic_demo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/index.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +73,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Starter">
+  <component name="RunManager" selected="Maven.mybatis-generator">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -166,7 +159,7 @@
       <workItem from="1687527502564" duration="3213000" />
       <workItem from="1687590329805" duration="1249000" />
       <workItem from="1687694101730" duration="6409000" />
-      <workItem from="1687746307567" duration="1925000" />
+      <workItem from="1687746307567" duration="3629000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1687183879384</created>
@@ -266,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687694122086</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="basic_demo">
+      <created>1687748430858</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1687748430858</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +291,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="add user file" />
     <MESSAGE value="update code 6/25" />
-    <option name="LAST_COMMIT_MESSAGE" value="update code 6/25" />
+    <MESSAGE value="basic_demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic_demo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
