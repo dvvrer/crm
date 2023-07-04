@@ -4,17 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/SaleChanceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/SaleChanceQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/SaleChanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/sale.chance.js" afterDir="false" />
+    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update 2023/6/26">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CusDevPlanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/enums/CustomerServeStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/enums/DevResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/enums/StateStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CusDevPlanQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/UserQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CusDevPlanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/cusDevPlan/add.update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/cusDevPlan/cus.dev.plan.data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/cusDevPlan/cus.dev.plan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/add.update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/SaleChanceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/SaleChanceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/SaleChance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/SaleChance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/SaleChanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/SaleChanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/SaleChanceQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/SaleChanceQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/SaleChanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/SaleChanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SaleChanceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/SaleChanceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/saleChance/sale_chance.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/saleChance/sale_chance.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/sale.chance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/sale.chance.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,23 +83,35 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/views/saleChance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public/js/user" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/views/saleChance" />
-      <recent name="$PROJECT_DIR$/src/main/resources/views" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm/dao" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/js/user" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm" />
+      <recent name="$PROJECT_DIR$/src/main/resources/views/cusDevPlan" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/js/saleChance" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Starter">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -157,7 +186,9 @@
       <workItem from="1687694101730" duration="6409000" />
       <workItem from="1687746307567" duration="4698000" />
       <workItem from="1687769404971" duration="4758000" />
-      <workItem from="1687783567596" duration="3720000" />
+      <workItem from="1687783567596" duration="3823000" />
+      <workItem from="1687825951650" duration="124000" />
+      <workItem from="1688182547715" duration="63629000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1687183879384</created>
@@ -278,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687752799716</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update 2023/6/26">
+      <created>1687789743519</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1687789743519</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update 2023/6/26">
+      <created>1687789750728</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1687789750728</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +350,8 @@
     <MESSAGE value="update code 6/25" />
     <MESSAGE value="basic_demo" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update 2023/6/26" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 2023/6/26" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

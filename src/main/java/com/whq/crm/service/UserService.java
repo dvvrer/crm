@@ -5,6 +5,7 @@ import com.whq.crm.dao.UserMapper;
 import com.whq.crm.model.UserModel;
 import com.whq.crm.utils.AssertUtil;
 import com.whq.crm.utils.Md5Util;
+import com.whq.crm.utils.PhoneUtil;
 import com.whq.crm.utils.UserIDBase64;
 import com.whq.crm.vo.User;
 import org.apache.commons.lang3.StringUtils;
@@ -13,6 +14,9 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserService extends BaseService<User,Integer> {
@@ -113,5 +117,88 @@ public class UserService extends BaseService<User,Integer> {
         AssertUtil.isTrue(StringUtils.isBlank(userName),"用户姓名不能为空！");
         //验证用户密码
         AssertUtil.isTrue(StringUtils.isBlank(userPwd),"用户密码不能为空！");
+    }
+
+    /**
+     * 查询所有销售人员
+     * @return
+     */
+    public List<Map<String,Object>> queryAllSales(){
+        return userMapper.queryAllSales();
+    }
+
+    /**
+     * 添加用户操作
+     * @param user
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void addUser(User user){
+        /*1、参数校验*/
+        checkUserParams(user.getUserName(),user.getPhone(),user.getEmail(),null);
+
+        /*2、设置参数默认值*/
+        user.setIsValid(1);
+        user.setCreateDate(new Date());
+        user.setUpdateDate(new Date());
+        user.setUserPwd(Md5Util.encode("123456"));
+
+        /*3、执行添加操作，判断受影响的行数*/
+        AssertUtil.isTrue(userMapper.insertSelective(user) != 1,"用户添加失败！");
+    }
+
+    /**
+     * 更新用户操作
+     * @param user
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void updateUser(User user){
+        /*1、判断用户id是否存在*/
+        AssertUtil.isTrue(user.getId() == null,"待更新记录不存在！");
+        /*2、通过id查询用户记录*/
+        User temp = userMapper.selectByPrimaryKey(user.getId());
+        /*3、判断用户记录是否为空*/
+        AssertUtil.isTrue(temp == null,"待更新记录不存在！");
+        /*4、参数校验*/
+        checkUserParams(user.getUserName(),user.getPhone(),user.getEmail(),user.getId());
+
+        /*5、设置默认值*/
+        user.setUpdateDate(new Date());
+        /*6、执行更新操作，判断受影响行数*/
+        AssertUtil.isTrue(userMapper.updateByPrimaryKeySelective(user) != 1,"更新用户信息失败！");
+    }
+
+    /**
+     * 参数校验
+     * @param userName
+     * @param phone
+     * @param email
+     */
+    private void checkUserParams(String userName, String phone, String email, Integer userId) {
+        //判断用户名是否为空
+        AssertUtil.isTrue(StringUtils.isBlank(userName),"用户名不能为空！");
+        //判断用户名是否唯一
+        //通过用户名查询用户对象
+        User temp = userMapper.queryUserByName(userName);
+        //如果用户名为空，则表示用户名可用，如果用户名不为空，则表示用户名不可用
+        AssertUtil.isTrue(temp != null && !temp.getId().equals(userId),"用户名已存在，请重新输入！");
+        //判断邮箱是否为空
+        AssertUtil.isTrue(email == null,"邮箱不能为空！");
+        //判断手机号是否为空
+        AssertUtil.isTrue(phone == null,"手机不能为空！");
+        //判断手机号格式是否正确
+        AssertUtil.isTrue(!PhoneUtil.isMobile(phone),"手机号格式不正确！");
+    }
+
+    /**
+     * 用户删除操作
+     * @param ids
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void deleteByIds(Integer[] ids) {
+        //判断ids是否为空，长度是否大于0
+        AssertUtil.isTrue(null == ids || ids.length == 0,"待删除记录不存在！");
+        //执行删除操作，判断受影响的行数
+        AssertUtil.isTrue(userMapper.deleteBatch(ids) != ids.length,"用户记录删除失败！");
+
     }
 }

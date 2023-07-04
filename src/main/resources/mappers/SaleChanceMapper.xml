@@ -229,7 +229,7 @@
     ,u.user_name as uname
     from
         t_sale_chance s
-    inner join
+    left join
         t_user u
     on
         s.assign_man = u.id
@@ -244,6 +244,29 @@
         <if test="state != null">
           and s.state = #{state}
         </if>
+        <!-- 根据开发状态进行查询 -->
+        <if test="devResult != null and devResult != ''">
+          and s.dev_result = #{devResult}
+        </if>
+        <!-- 根据指派人进行查询 -->
+        <if test="assignMan != null">
+          and s.assign_man = #{assignMan}
+        </if>
+
     </where>
   </select>
+  
+  <!--批量删除(修改操作)-->
+  <update id="deleteBatch">
+    update
+        t_sale_chance
+    set
+        is_valid = 0
+    where
+        id
+    in
+        <foreach collection="array" separator="," open="(" close=")" item="id">
+          #{id}
+        </foreach>
+  </update>
 </mapper>

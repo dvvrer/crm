@@ -4,8 +4,10 @@ import com.whq.crm.base.BaseController;
 import com.whq.crm.base.ResultInfo;
 import com.whq.crm.exceptions.ParamsException;
 import com.whq.crm.model.UserModel;
+import com.whq.crm.query.UserQuery;
 import com.whq.crm.service.UserService;
 import com.whq.crm.utils.LoginUserUtil;
+import com.whq.crm.vo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/user")
@@ -88,5 +92,80 @@ public class UserController extends BaseController {
     @RequestMapping("/toPasswordPage")
     public String toPasswordPage(){
         return "user/password";
+    }
+
+
+    @ResponseBody
+    @RequestMapping("queryAllSales")
+    public List<Map<String,Object>> queryAllSales(){
+        return userService.queryAllSales();
+    }
+
+    @ResponseBody
+    @RequestMapping("list")
+    public Map<String,Object> queryByParams(UserQuery userQuery){
+        return userService.queryByParamsForTable(userQuery);
+    }
+
+    /**
+     * 进入用户列表页面
+     * @return
+     */
+    @RequestMapping("index")
+    public String index(){
+        return "user/user";
+    }
+
+    /**
+     * 添加用户信息
+     * @param user
+     * @return
+     */
+    @RequestMapping("add")
+    @ResponseBody
+    public ResultInfo addUser(User user){
+        userService.addUser(user);
+        return success("用户添加成功！");
+    }
+
+    /**
+     * 更新用户信息
+     * @param user
+     * @return
+     */
+    @RequestMapping("update")
+    @ResponseBody
+    public ResultInfo updateUser(User user){
+        userService.updateUser(user);
+        return success("用户更新成功！");
+    }
+
+
+    /**
+     * 打开添加或修改用户页面
+     * @return
+     */
+    @RequestMapping("toAddOrUpdateUserPage")
+    public String toAddOrUpdateUserPage(Integer id,HttpServletRequest request){
+        //判断id是否为空，不为空则表示更新操作，查询用户对象
+        if (id != null){
+            //查询用户对象
+            User user = userService.selectByPrimaryKey(id);
+            System.out.println(user.getUserName());
+            System.out.println(user.getTrueName());
+            System.out.println(user.getEmail());
+            System.out.println(user.getPhone());
+            //将数据设置到请求域中
+            request.setAttribute("userInfo",user);
+        }
+        return "user/add_update";
+    }
+
+    @RequestMapping("delete")
+    @ResponseBody
+    public ResultInfo deleteUser(Integer[] ids){
+        userService.deleteByIds(ids);
+
+        return success("用户记录删除成功！");
     }
 }

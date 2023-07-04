@@ -7,7 +7,8 @@ layui.use(['table','layer'],function (){
      * 加载数据表格
      */
     var tableIns = table.render({
-       elem:'#saleChanceList'
+        id:'saleChanceTable'
+       ,elem:'#saleChanceList'
         //容器的高度 full-差值
        ,height:'full-125'
         //单元格最小宽度
@@ -34,7 +35,7 @@ layui.use(['table','layer'],function (){
             ,{field:'createMan',title:'创建人',align:'center'}
             ,{field:'uname',title:'分配人',align:'center'}
             ,{field:'createDate',title:'创建时间',align:'center',width: 170}
-            ,{field:'assignTime',title:'分配时间',align:'center',width: 170}
+            ,{field:'updateTime',title:'修改时间',align:'center',width: 170}
             ,{field:'state',title:'分配状态',align:'center',templet: function (d){
                 //调用函数，返回格式化的结果
                 return formatState(d.state);
@@ -105,11 +106,133 @@ layui.use(['table','layer'],function (){
             ,page:{
                 curr:1//重新从第1页开始
             }
-        })
+        });
+    });
+
+
+    /**
+     * 删除营销机会
+     * @param data
+     */
+    function deleteSaleChance(data) {
+        //获取数据表格中选中的行数据
+        var checkStatus = table.checkStatus("saleChanceTable");
+        console.log(checkStatus);
+        //获取所有被选中的记录对应的数据
+        var saleChanceData = checkStatus.data;
+        //判断是否选择了要删除的记录
+        if (saleChanceData.length < 1){
+            layer.msg("请选择要删除的记录！",{icon: 5});
+            return;
+        }
+        //询问用户是否确认删除
+        layer.confirm("您确认要删除选中的记录吗？",{icon: 3,title: '营销机会管理'},function (index){
+            //关闭确认框
+            layer.close(index)
+            var ids = "";
+            //循环选中的行记录
+            for (let i = 0; i < saleChanceData.length; i++) {
+                ids = ids + "&ids=" + saleChanceData[i].id
+            }
+            // console.log(ids);
+
+            //发送ajax请求，执行删除营销机会
+            $.ajax({
+                type: "post",
+                url: ctx + "/sale_chance/delete",
+                data:ids,
+                success: function (result){
+                    //判断删除结果
+                    if (result.code == 200){
+                        //提示成功
+                        layer.msg("删除成功！",{icon: 6})
+                        //重载表格
+                        tableIns.reload();
+                    }else {
+                        //提示失败
+                        layer.msg(result.msg,{icon: 5})
+                    }
+                }
+            });
+        });
+    }
+
+    table.on('toolbar(saleChances)',function (data){
+        console.log(data);
+        if (data.event == "add"){
+            //添加操作
+            openSaleChanceDialog();
+
+        }else if (data.event == "del"){
+            //删除操作
+            deleteSaleChance(data);
+        }
     })
 
+    /**
+     * 打开添加/修改营销机会数据的窗口
+     * 如果saleChanceId为空则为添加操作
+     * 如果saleChanceId不为空则为修改操作
+     */
+    function openSaleChanceDialog(saleChanceId){
+        //弹出层的标题
+        var title = "<h2>营销机会管理-添加营销机会</h2>";
+        var url = ctx + "/sale_chance/toSaleChancePage";
 
+        //判断saleChanceId是否为空
+        if (saleChanceId != null && saleChanceId != ''){
+            //修改操作
+            title = "<h2>营销机会管理-更新营销机会</h2>";
+            //请求地址添加营销机会id
+            url += "?saleChanceId=" + saleChanceId;
+        }
+        layui.layer.open({
+            //类型
+            type: 2,
+            //标题
+            title: title,
+            //宽高
+            area: ['500px','620px'],
+            //url地址
+            content: url,
+            //最大最小化
+            maxmin: true
+        });
+    }
 
+    table.on('tool(saleChances)',function(data){
+        if (data.event == "edit"){  //编辑操作
+            var saleChanceId = data.data.id;
+            //打开修改营销机会窗口
+            openSaleChanceDialog(saleChanceId);
+        }else if (data.event == "del"){  //删除操作
+            //弹出询问框，询问用户是否确认删除
+            layer.confirm("确认要删除吗？",{icon: 3,title: "营销机会管理"},function (index){
+                //关闭确认框
+                layer.close(index);
+                //发送对应的ajax请求，删除记录
+                $.ajax({
+                    type: "post",
+                    url: ctx + "/sale_chance/delete",
+                    data:{
+                        ids:data.data.id
+                    },
+                    success:function (result){
+                        //判断删除结果
+                        if (result.code == 200){
+                            //提示成功
+                            layer.msg("删除成功！",{icon: 6})
+                            //重载表格
+                            tableIns.reload();
+                        }else {
+                            //提示失败
+                            layer.msg(result.msg,{icon: 5})
+                        }
+                    }
+                });
+            });
+        }
+    });
 
 
 });
