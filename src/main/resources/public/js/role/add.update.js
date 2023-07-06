@@ -8,7 +8,7 @@ layui.use(['form', 'layer', 'formSelects'], function () {
     /**
      * 监听submit事件
      */
-    form.on('submit(addOrUpdateUser)',function (data){
+    form.on('submit(addOrUpdateRole)',function (data){
         //提交数据时的加载层
         var index = layer.msg("数据提交中，请稍后...",{
             icon: 16,   //图标
@@ -20,11 +20,7 @@ layui.use(['form', 'layer', 'formSelects'], function () {
         var formData = data.field;
 
         //发送ajax请求
-        var url = ctx + "/user/add";
-
-        if ($("[name = 'id']").val()){
-            var url = ctx + "/user/update";
-        }
+        var url = ctx + "/role/add";
 
         $.post(url,data.field,function (result){
             //判断执行是否成功，200=成功
@@ -55,12 +51,4 @@ layui.use(['form', 'layer', 'formSelects'], function () {
         var index = parent.layer.getFrameIndex(window.name);
         parent.layer.close(index);
     })
-
-    var userId = $("[name = 'id']").val();
-    formSelects.config("selectId",{
-        type: "post",    //请求方式
-        searchUrl: ctx + "/role/queryAllRoles?userId=" + userId, //请求地址
-        keyName: "roleName",    //下拉框中的文本值内容，要与返回数据中的key一致
-        keyVal: "id"
-    },true);
 });

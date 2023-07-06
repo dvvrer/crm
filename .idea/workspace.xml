@@ -4,34 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update 2023/6/26">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CusDevPlanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/enums/CustomerServeStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/enums/DevResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/enums/StateStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CusDevPlanQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/UserQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CusDevPlanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/cusDevPlan/add.update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/cusDevPlan/cus.dev.plan.data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/cusDevPlan/cus.dev.plan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/add.update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" afterDir="false" />
+    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update 2023/7/4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserRoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/RoleQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/role/add.update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/role/role.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/SaleChanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/SaleChanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/SaleChanceQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/SaleChanceQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/SaleChanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/SaleChanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/SaleChanceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/SaleChanceMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/sale.chance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/sale.chance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,18 +69,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public/js/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public/js/role" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public/js/role" />
       <recent name="$PROJECT_DIR$/src/main/resources/public/js/user" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/views/cusDevPlan" />
       <recent name="$PROJECT_DIR$/src/main/resources/public/js" />
-      <recent name="$PROJECT_DIR$/src/main/resources/public/js/saleChance" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm" />
@@ -188,7 +174,9 @@
       <workItem from="1687769404971" duration="4758000" />
       <workItem from="1687783567596" duration="3823000" />
       <workItem from="1687825951650" duration="124000" />
-      <workItem from="1688182547715" duration="63629000" />
+      <workItem from="1688182547715" duration="63668000" />
+      <workItem from="1688463130706" duration="15000" />
+      <workItem from="1688537261803" duration="9599000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1687183879384</created>
@@ -323,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687789750728</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update 2023/7/4">
+      <created>1688463101625</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1688463101625</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +346,8 @@
     <MESSAGE value="basic_demo" />
     <MESSAGE value="update" />
     <MESSAGE value="update 2023/6/26" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 2023/6/26" />
+    <MESSAGE value="update 2023/7/4" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 2023/7/4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

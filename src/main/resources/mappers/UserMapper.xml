@@ -35,7 +35,15 @@
       #{isValid,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}, #{updateDate,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.whq.crm.vo.User">
+
+  <!--
+    添加操作：
+      默认返回的是受影响的行数，可以设置返回主键（自动增长）
+      useGeneratedKeys：取值范围：true false，表示会获取主键，并赋值到keyProperty属性设置的模型中（javaBean中的属性字段）
+      keyProperty：设置返回的数据将赋值给哪个属性字段
+      keyColumn：数据库中自动生成的属性名
+  -->
+  <insert id="insertSelective" parameterType="com.whq.crm.vo.User" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

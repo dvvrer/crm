@@ -30,6 +30,16 @@ public class User {
 
     private Integer isValid;
 
+    private String roleIds;     //用户对应的角色id
+
+    public String getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(String roleIds) {
+        this.roleIds = roleIds;
+    }
+
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createDate;
 

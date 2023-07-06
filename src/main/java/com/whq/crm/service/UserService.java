@@ -2,18 +2,21 @@ package com.whq.crm.service;
 
 import com.whq.crm.base.BaseService;
 import com.whq.crm.dao.UserMapper;
+import com.whq.crm.dao.UserRoleMapper;
 import com.whq.crm.model.UserModel;
 import com.whq.crm.utils.AssertUtil;
 import com.whq.crm.utils.Md5Util;
 import com.whq.crm.utils.PhoneUtil;
 import com.whq.crm.utils.UserIDBase64;
 import com.whq.crm.vo.User;
+import com.whq.crm.vo.UserRole;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +26,9 @@ public class UserService extends BaseService<User,Integer> {
 
     @Resource
     private UserMapper userMapper;
+
+    @Resource
+    private UserRoleMapper userRoleMapper;
 
     /**
      * 用户登录
@@ -143,7 +149,46 @@ public class UserService extends BaseService<User,Integer> {
         user.setUserPwd(Md5Util.encode("123456"));
 
         /*3、执行添加操作，判断受影响的行数*/
-        AssertUtil.isTrue(userMapper.insertSelective(user) != 1,"用户添加失败！");
+        AssertUtil.isTrue(userMapper.insertSelective(user) < 1,"用户添加失败！");
+
+        /*4、用户角色关联*/
+        relationUserRole(user.getId(),user.getRoleIds());
+    }
+
+    /**
+     * 用户角色关联
+     * @param userId
+     * @param roleIds
+     */
+    private void relationUserRole(Integer userId, String roleIds) {
+        System.out.println(userId);
+        //通过用户id查询角色记录
+        Integer count = userRoleMapper.countUserRoleByUserId(userId);
+        //判断角色记录是否存在
+        if (count > 0){
+            //如果角色记录存在，则删除该用户对应的角色记录
+            AssertUtil.isTrue(userRoleMapper.deleteUserRoleByUserId(userId) != count,"角色分配失败！");
+        }
+
+        //判断角色id是否存在，如果存在，则添加该用户对应的角色记录
+        if (StringUtils.isNoneBlank(roleIds)){
+            //将用户角色数据设置到集合中，执行批量添加操作
+            List<UserRole> userRoleList = new ArrayList<>();
+            //将角色id字符串转换为数组
+            String[] roleIdsArray = roleIds.split(",");
+            //遍历数组，得到对应的用户角色对象，并设置到集合中
+            for (String s : roleIdsArray) {
+                UserRole userRole = new UserRole();
+                userRole.setRoleId(Integer.parseInt(s));
+                userRole.setUserId(userId);
+                userRole.setCreateDate(new Date());
+                userRole.setUpdateDate(new Date());
+                //设置到集合中
+                userRoleList.add(userRole);
+            }
+            //批量添加用户操作
+            AssertUtil.isTrue(userRoleMapper.insertBatch(userRoleList) != userRoleList.size(),"角色分配失败！");
+        }
     }
 
     /**
@@ -165,6 +210,9 @@ public class UserService extends BaseService<User,Integer> {
         user.setUpdateDate(new Date());
         /*6、执行更新操作，判断受影响行数*/
         AssertUtil.isTrue(userMapper.updateByPrimaryKeySelective(user) != 1,"更新用户信息失败！");
+
+        /*7、用户角色关联*/
+        relationUserRole(user.getId(),user.getRoleIds());
     }
 
     /**
@@ -199,6 +247,18 @@ public class UserService extends BaseService<User,Integer> {
         AssertUtil.isTrue(null == ids || ids.length == 0,"待删除记录不存在！");
         //执行删除操作，判断受影响的行数
         AssertUtil.isTrue(userMapper.deleteBatch(ids) != ids.length,"用户记录删除失败！");
+
+        //遍历用户id的数组
+        for (Integer id : ids) {
+            //通过用户id查询对应的用户角色记录
+            Integer count = userRoleMapper.countUserRoleByUserId(id);
+            //判断用户角色记录是否存在
+            if (count > 0){
+                //通过用户ID删除对应的用户角色记录
+                AssertUtil.isTrue(userRoleMapper.deleteUserRoleByUserId(id) != count,"用户记录删除失败！");
+
+            }
+        }
 
     }
 }
