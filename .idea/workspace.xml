@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update 2023/7/4">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/UserRoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/RoleQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/role/add.update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/role/role.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/add.update.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,17 +75,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Starter">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -176,7 +153,8 @@
       <workItem from="1687825951650" duration="124000" />
       <workItem from="1688182547715" duration="63668000" />
       <workItem from="1688463130706" duration="15000" />
-      <workItem from="1688537261803" duration="9599000" />
+      <workItem from="1688537261803" duration="9727000" />
+      <workItem from="1688626387149" duration="296000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1687183879384</created>
@@ -318,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688463101625</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update 2023/7/4">
+      <created>1688614337119</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1688614337119</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
