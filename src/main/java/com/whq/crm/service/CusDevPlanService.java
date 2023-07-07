@@ -105,6 +105,7 @@ public class CusDevPlanService extends BaseService<CusDevPlan,Integer> {
      * @param id
      */
     public void deleteCusDevPlan(Integer id) {
+        System.out.println(id);
         //1、判断id是否为空，且数据存在
         AssertUtil.isTrue(null == id,"待删除的计划项不存在！");
         //2、通过id查询计划项对象

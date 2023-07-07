@@ -178,7 +178,6 @@ layui.use(['table','layer'],function(){
             //打开添加/修改用户对话框
             openAddOrUpdateUserDialog(data.data.id);
         }else if (data.event == "del"){
-            console.log(data.data.id)
             deleteUser(data.data.id);
         }
     });

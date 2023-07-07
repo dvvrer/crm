@@ -4,8 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update 2023/7/4">
+    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update 2023/7/6 customer start 2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerLossQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerOrderQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerReprieveQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerServeQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/OrderDetailsQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/CustomerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CusDevPlanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CusDevPlanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CustomerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/customer/add.update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/add_update.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer_order.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer_order_detail.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/customer/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/customer/add_update.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,18 +78,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public/js/role" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/whq/crm/query" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm/query" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public/js" />
       <recent name="$PROJECT_DIR$/src/main/resources/public/js/role" />
       <recent name="$PROJECT_DIR$/src/main/resources/public/js/user" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources/views/cusDevPlan" />
-      <recent name="$PROJECT_DIR$/src/main/resources/public/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm" />
@@ -154,7 +175,8 @@
       <workItem from="1688182547715" duration="63668000" />
       <workItem from="1688463130706" duration="15000" />
       <workItem from="1688537261803" duration="9727000" />
-      <workItem from="1688626387149" duration="296000" />
+      <workItem from="1688626387149" duration="9069000" />
+      <workItem from="1688636746922" duration="11423000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1687183879384</created>
@@ -303,7 +325,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688614337119</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update 2023/7/6 customer start">
+      <created>1688626838140</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1688626838140</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update 2023/7/6 customer start 2">
+      <created>1688626871817</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1688626871817</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,10 +368,17 @@
     <MESSAGE value="update" />
     <MESSAGE value="update 2023/6/26" />
     <MESSAGE value="update 2023/7/4" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 2023/7/4" />
+    <MESSAGE value="update 2023/7/6 customer start" />
+    <MESSAGE value="update 2023/7/6 customer start 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 2023/7/6 customer start 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/crm$Starter.ic" NAME="Starter Coverage Results" MODIFIED="1688636612817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.whq.crm.*</FILTER>
+    </SUITE>
   </component>
 </project>

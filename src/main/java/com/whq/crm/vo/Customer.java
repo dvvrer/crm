@@ -252,4 +252,35 @@ public class Customer {
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", khno='" + khno + '\'' +
+                ", name='" + name + '\'' +
+                ", area='" + area + '\'' +
+                ", cusManager='" + cusManager + '\'' +
+                ", level='" + level + '\'' +
+                ", myd='" + myd + '\'' +
+                ", xyd='" + xyd + '\'' +
+                ", address='" + address + '\'' +
+                ", postCode='" + postCode + '\'' +
+                ", phone='" + phone + '\'' +
+                ", fax='" + fax + '\'' +
+                ", webSite='" + webSite + '\'' +
+                ", yyzzzch='" + yyzzzch + '\'' +
+                ", fr='" + fr + '\'' +
+                ", zczj='" + zczj + '\'' +
+                ", nyye='" + nyye + '\'' +
+                ", khyh='" + khyh + '\'' +
+                ", khzh='" + khzh + '\'' +
+                ", dsdjh='" + dsdjh + '\'' +
+                ", gsdjh='" + gsdjh + '\'' +
+                ", state=" + state +
+                ", isValid=" + isValid +
+                ", createDate=" + createDate +
+                ", updateDate=" + updateDate +
+                '}';
+    }
 }

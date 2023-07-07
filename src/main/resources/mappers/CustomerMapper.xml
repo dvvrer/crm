@@ -326,82 +326,24 @@
       update_date = #{updateDate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <resultMap id="BaseResultMap" type="com.whq.crm.vo.Customer">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="username" jdbcType="VARCHAR" property="username" />
-    <result column="jobs" jdbcType="VARCHAR" property="jobs" />
-    <result column="phone" jdbcType="VARCHAR" property="phone" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, username, jobs, phone
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from t_customer
-    where id = #{id,jdbcType=INTEGER}
+
+  <!--多条件查询-->
+  <select id="selectByParams" parameterType="com.whq.crm.query.CustomerQuery" resultType="com.whq.crm.vo.Customer">
+    select
+        <include refid="Base_Column_List"/>
+    from
+        t_customer
+    <where>
+      is_valid = 1
+      <if test="customerName != null and customerName != ''">
+        and name like concat('%',#{customerName},'%')
+      </if>
+      <if test="customerNo != null and customerNo != ''">
+        and khno like concat('%',#{customerNo},'%')
+      </if>
+      <if test="level != null and level != ''">
+        and level like concat('%',#{level},'%')
+      </if>
+    </where>
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from t_customer
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.whq.crm.vo.Customer">
-    insert into t_customer (id, username, jobs, 
-      phone)
-    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{jobs,jdbcType=VARCHAR}, 
-      #{phone,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.whq.crm.vo.Customer">
-    insert into t_customer
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="username != null">
-        username,
-      </if>
-      <if test="jobs != null">
-        jobs,
-      </if>
-      <if test="phone != null">
-        phone,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="username != null">
-        #{username,jdbcType=VARCHAR},
-      </if>
-      <if test="jobs != null">
-        #{jobs,jdbcType=VARCHAR},
-      </if>
-      <if test="phone != null">
-        #{phone,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.whq.crm.vo.Customer">
-    update t_customer
-    <set>
-      <if test="username != null">
-        username = #{username,jdbcType=VARCHAR},
-      </if>
-      <if test="jobs != null">
-        jobs = #{jobs,jdbcType=VARCHAR},
-      </if>
-      <if test="phone != null">
-        phone = #{phone,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.whq.crm.vo.Customer">
-    update t_customer
-    set username = #{username,jdbcType=VARCHAR},
-      jobs = #{jobs,jdbcType=VARCHAR},
-      phone = #{phone,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
 </mapper>

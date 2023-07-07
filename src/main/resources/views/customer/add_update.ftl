@@ -6,7 +6,7 @@
 <body class="childrenBody">
 <form class="layui-form" style="width:80%;">
 
-    <input name="id" type="hidden" value="${(customer.id)!}"/>
+    <input name="id" id="id" type="hidden" value="${(customer.id)!}"/>
 
     <div class="layui-form-item layui-row">
         <div class="layui-col-xs6">
@@ -46,12 +46,13 @@
         <div class="layui-col-xs6">
             <label class="layui-form-label">客户级别</label>
             <div class="layui-input-block">
-                <select name="level"  id="level">
+                <select name="level"  id="level" >
                     <option value="" >请选择</option>
                     <option value="普通客户">普通客户</option>
-                    <option value="重点开发客户" >重点开发客户</option>
-                    <option value="大客户" >大客户</option>
-                    <option value="合作伙伴" >合作伙伴</option>
+                    <option value="重点开发客户">重点开发客户</option>
+                    <option value="大客户">大客户</option>
+                    <option value="合作伙伴">合作伙伴</option>
+                    <option value="战略合作伙伴">战略合作伙伴</option>
                 </select>
             </div>
         </div>
