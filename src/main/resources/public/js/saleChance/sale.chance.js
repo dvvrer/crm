@@ -157,6 +157,9 @@ layui.use(['table','layer'],function (){
         });
     }
 
+    /**
+     * 监听头部工具栏
+     */
     table.on('toolbar(saleChances)',function (data){
         console.log(data);
         if (data.event == "add"){

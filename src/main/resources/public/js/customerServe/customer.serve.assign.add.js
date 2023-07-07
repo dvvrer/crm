@@ -4,10 +4,11 @@ layui.use(['form', 'layer'], function () {
         $ = layui.jquery;
 
 
+
     /**
      * 表单Submit监听
      */
-    form.on('submit(addOrUpdateCustomer)', function (data) {
+    form.on('submit(addOrUpdateCustomerServe)', function (data) {
 
         // 提交数据时的加载层 （https://layer.layui.com/）
         var index = top.layer.msg("数据提交中,请稍后...",{
@@ -21,13 +22,7 @@ layui.use(['form', 'layer'], function () {
         console.log(formData);
 
         // 请求的地址
-        var url = ctx + "/customer/add"; // 添加操作
-
-        // 获取隐藏域中的id
-        var id = $("[name='id']").val();
-        if(id != null && id != '') {
-            url = ctx + "/customer/update"; // 更新操作
-        }
+        var url = ctx + "/customer_serve/update"; // 服务分配操作
 
         $.post(url, formData, function (result) {
             // 判断操作是否执行成功 200=成功
@@ -51,8 +46,6 @@ layui.use(['form', 'layer'], function () {
         return false;
     });
 
-
-
     /**
      * 关闭弹出层
      */
@@ -62,5 +55,32 @@ layui.use(['form', 'layer'], function () {
         parent.layer.close(index); // 再执行关闭
     });
 
+
+    /**
+     * 加载指派人的下拉框 （客户经理）
+     */
+    $.ajax({
+        type:"get",
+        url:ctx + "/user/queryAllCustomerManagers",
+        data:{},
+        success:function (data) {
+            // console.log(data);
+            // 判断返回的数据是否为空
+            if (data != null) {
+
+                // 遍历返回的数据
+                for(var i = 0; i < data.length; i++) {
+
+                    // 设置下拉选项
+                    var opt = "<option value='"+data[i].id+"'>"+data[i].uname+"</option>";
+
+                    // 将下拉项设置到下拉框中
+                    $("#assigner").append(opt);
+                }
+            }
+            // 重新渲染下拉框的内容
+            layui.form.render("select");
+        }
+    });
 
 });

@@ -4,29 +4,75 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update 2023/7/6 customer start 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerLossQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerOrderQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerReprieveQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerServeQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/OrderDetailsQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CustomerService.java" afterDir="false" />
+    <list default="true" id="69e786a9-6d0a-4be0-b0d8-27cb886e106f" name="Default Changelist" comment="update 2023/7/7">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerLossController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerReprieveController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerServeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/ModuleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/OrderDetailsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/CustomerLossMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/CustomerOrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/CustomerReprieveMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/CustomerServeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/ModuleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/OrderDetailsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/PermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/exceptions/AuthException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/model/TreeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CustomerLossService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CustomerOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CustomerReprieveService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CustomerServeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/ModuleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/OrderDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/CustomerLoss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/CustomerOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/CustomerReprieve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/CustomerServe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/Module.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/OrderDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/CustomerLossMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/CustomerOrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/CustomerReprieveMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/CustomerServeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/ModuleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/OrderDetailsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/PermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerLoss/customer.loss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerLoss/customer.rep.add.update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerLoss/customer.rep.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.archive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.assign.add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.assign.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.feed.back.add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.feed.back.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.proce.add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/customerServe/customer.serve.proce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/module/add.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/module/module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/module/update.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/report/customer.contri.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/report/customer.loss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/js/report/customer.make.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/dao/CustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CusDevPlanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CusDevPlanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/query/CustomerQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/service/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/whq/crm/vo/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CustomerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CustomerMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/add.update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/customer/add.update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/add_update.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.ftl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer_order.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer_order_detail.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/user/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/customer/add_update.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/customer/add_update.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.order.details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.order.details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/customer/customer.order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/sale.chance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/js/saleChance/sale.chance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/main.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,20 +124,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/whq/crm/query" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm/query" />
       <recent name="$PROJECT_DIR$/src/main/resources/public/js" />
-      <recent name="$PROJECT_DIR$/src/main/resources/public/js/role" />
-      <recent name="$PROJECT_DIR$/src/main/resources/public/js/user" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm/controller" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mappers" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm/dao" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm/exceptions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/whq/crm" />
     </key>
   </component>
@@ -177,6 +224,7 @@
       <workItem from="1688537261803" duration="9727000" />
       <workItem from="1688626387149" duration="9069000" />
       <workItem from="1688636746922" duration="11423000" />
+      <workItem from="1688697206392" duration="4029000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1687183879384</created>
@@ -339,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688626871817</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update 2023/7/7">
+      <created>1688697500108</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1688697500108</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +425,8 @@
     <MESSAGE value="update 2023/7/4" />
     <MESSAGE value="update 2023/7/6 customer start" />
     <MESSAGE value="update 2023/7/6 customer start 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 2023/7/6 customer start 2" />
+    <MESSAGE value="update 2023/7/7" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 2023/7/7" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

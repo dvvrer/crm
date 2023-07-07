@@ -2,7 +2,8 @@ layui.use(['table','layer'],function(){
     var layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery,
         table = layui.table;
-    //订单列表展示
+
+    // 订单列表展示
     var  tableIns = table.render({
         elem: '#customerOrderList',
         url : ctx+"/order/list?cusId="+$("input[name='id']").val(),
@@ -33,7 +34,29 @@ layui.use(['table','layer'],function(){
     });
 
 
-   
+    /**
+     * 监听行工具栏
+     */
+    table.on('tool(customerOrders)',function (data) {
+        if (data.event == "info") { // 订单详情
+            var title = "<h3>客户管理 - 查询订单详情</h3>";
+            var url = ctx + "/order/toOrderDetailPage?orderId=" + data.data.id;
+
+            // iframe层
+            layui.layer.open({
+                // 类型
+                type: 2,
+                // 标题
+                title: title,
+                // 宽高
+                area: ['700px', '400px'],
+                // url地址
+                content: url,
+                // 可以最大化与最小化
+                maxmin:true
+            });
+        }
+    });
 
 
 

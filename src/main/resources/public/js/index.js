@@ -36,7 +36,7 @@ layui.use(['form','jquery','jquery_cookie'], function () {
                      * 2、利用cookie
                      *      保存用户信息，cookie未失效，则用户是登录状态
                      */
-                    layer.msg("登录成功！",function (){
+                    layer.msg("登录成功！",{icon: 6},function (){
 
                         //判断用户是否选择记住密码（判断复选框是否被选中，如果选中，则设置cookie对象7天生效）
                         if($("#rememberMe").prop("checked")){

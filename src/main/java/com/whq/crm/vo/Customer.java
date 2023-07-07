@@ -1,19 +1,22 @@
 package com.whq.crm.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Customer {
-    private Integer id;
 
-    private String khno;
+    private Integer id; // 主键ID
 
-    private String name;
+    private String khno; // 客户编号
+
+    private String name; // 客户名称
 
     private String area;
 
     private String cusManager;
 
-    private String level;
+    private String level; // 客户级别
 
     private String myd;
 
@@ -23,7 +26,7 @@ public class Customer {
 
     private String postCode;
 
-    private String phone;
+    private String phone; // 手机号码
 
     private String fax;
 
@@ -31,7 +34,7 @@ public class Customer {
 
     private String yyzzzch;
 
-    private String fr;
+    private String fr; // 法人代表
 
     private String zczj;
 
@@ -45,12 +48,14 @@ public class Customer {
 
     private String gsdjh;
 
-    private Integer state;
+    private Integer state; // 流失状态  0=正常 1=流失
 
     private Integer isValid;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createDate;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date updateDate;
 
     public Integer getId() {
@@ -251,36 +256,5 @@ public class Customer {
 
     public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", khno='" + khno + '\'' +
-                ", name='" + name + '\'' +
-                ", area='" + area + '\'' +
-                ", cusManager='" + cusManager + '\'' +
-                ", level='" + level + '\'' +
-                ", myd='" + myd + '\'' +
-                ", xyd='" + xyd + '\'' +
-                ", address='" + address + '\'' +
-                ", postCode='" + postCode + '\'' +
-                ", phone='" + phone + '\'' +
-                ", fax='" + fax + '\'' +
-                ", webSite='" + webSite + '\'' +
-                ", yyzzzch='" + yyzzzch + '\'' +
-                ", fr='" + fr + '\'' +
-                ", zczj='" + zczj + '\'' +
-                ", nyye='" + nyye + '\'' +
-                ", khyh='" + khyh + '\'' +
-                ", khzh='" + khzh + '\'' +
-                ", dsdjh='" + dsdjh + '\'' +
-                ", gsdjh='" + gsdjh + '\'' +
-                ", state=" + state +
-                ", isValid=" + isValid +
-                ", createDate=" + createDate +
-                ", updateDate=" + updateDate +
-                '}';
     }
 }

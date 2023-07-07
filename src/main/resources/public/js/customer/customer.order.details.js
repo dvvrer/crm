@@ -2,7 +2,8 @@ layui.use(['table','layer',"form"],function(){
     var layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery,
         table = layui.table;
-    //订单列表展示
+
+    // 订单列表展示
     var  tableIns = table.render({
         elem: '#orderDetailList',
         url : ctx+'/order_details/list?orderId='+$("input[name='id']").val(),

@@ -2,10 +2,6 @@ package com.whq.crm.query;
 
 import com.whq.crm.base.BaseQuery;
 
-/**
- * 乐字节：专注线上IT培训
- * 答疑老师微信：lezijie
- */
 public class CustomerQuery extends BaseQuery {
 
     private String customerName; // 客户名称
